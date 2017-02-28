@@ -16,18 +16,15 @@ public class MainActivity extends AppCompatActivity {
             return 0;
         }
         else {
-            System.out.println("sn: " + n);
             return n + summation(n -1);
         }
     }
 
     public static int factorial(int n) {
         if (n<=1) {
-            System.out.println("fn: " + n);
             return 1;
         }
         else {
-            System.out.println("fn: " + n);
             return n * factorial(n-1);
         }
 
@@ -38,15 +35,13 @@ public class MainActivity extends AppCompatActivity {
             return 1;
         }
         else {
-            System.out.println("En: " + n);
-            System.out.println("Ep: " + p);
             return n * exponentation(n, p-1);
         }
     }
 
     public static void main(String[] args) {
-        summation(3);
-        factorial(3);
-        exponentation(5, 3);
+        System.out.println(summation(3));
+        System.out.println(factorial(3));
+        System.out.println(exponentation(5, 3));
     }
 }
