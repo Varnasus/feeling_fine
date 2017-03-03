@@ -11,6 +11,14 @@ public class Raptor extends Animal {
         System.out.println("A Raptor has been created.");
     }
 
+    public void eat() {
+        System.out.println("Raptor is eating.");
+    }
+
+    public void sleep() {
+        System.out.println("The Raptor is sleeping.");
+    }
+
     public void rawr() {
         System.out.println("The Raptor growled!");
     }

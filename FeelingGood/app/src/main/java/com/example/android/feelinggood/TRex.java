@@ -15,6 +15,14 @@ public class TRex extends Animal {
         System.out.println("TRex roars!");
     }
 
+    public void sleep() {
+        System.out.println("The Trex is sleeping.");
+    }
+
+    public void eat() {
+        System.out.println("TRex is eating.");
+    }
+
     public void groundShake() {
         System.out.println("The ground is shaking from the TRex!!");
     }

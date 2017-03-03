@@ -7,7 +7,7 @@ package com.example.android.feelinggood;
  *
  */
 
-public class Animal {
+public abstract class Animal {
 
     public int age;
 
@@ -16,8 +16,10 @@ public class Animal {
         System.out.println("An animal has been created!");
     }
 
-    public void eat() {
-        System.out.println("An animal is eating.");
+    public abstract void eat();
+
+    public void sleep() {
+        System.out.println("A animal is sleeping");
     }
 
     public int getAge() {
@@ -25,16 +27,13 @@ public class Animal {
     }
 
     public static void main(String[] args) {
-        Animal a = new Animal(5);
         Raptor r = new Raptor();
         TRex t = new TRex();
-        r.rawr();
+        r.eat();
+        t.eat();
+        r.sleep();
+        t.sleep();
         r.run();
-        a.eat();
-        t.groundShake();
-        t.roar();
-        System.out.println("TRex age is: " + t.age);
-        System.out.println("Raptor age is: " + r.age);
-
+        CalendarPractice();
     }
 }
