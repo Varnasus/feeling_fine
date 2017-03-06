@@ -34,6 +34,5 @@ public abstract class Animal {
         r.sleep();
         t.sleep();
         r.run();
-        CalendarPractice();
     }
 }

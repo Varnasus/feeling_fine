@@ -13,6 +13,10 @@ import java.util.Date;
 
 public class CalendarPractice extends Animal {
 
+    public CalendarPractice(int age) {
+        super(age);
+    }
+
     public void eat() {
 
     }
@@ -20,7 +24,7 @@ public class CalendarPractice extends Animal {
     public class MainActivity extends AppCompatActivity {
 
 
-        public static void main(String[] args) {
+        public void main(String[] args) {
             Calendar cal = Calendar.getInstance();
             cal.add(Calendar.DATE, 85);
             System.out.println(cal.getTime());
