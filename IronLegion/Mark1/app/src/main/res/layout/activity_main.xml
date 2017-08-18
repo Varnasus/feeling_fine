@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.android.mark1.MainActivity">
+
+    <ImageView
+        android:id="@+id/chiefslogo"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/chiefs_logo" />
+
+    <LinearLayout
+        android:id="@+id/table1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chiefslogo"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Register" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/table2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table1"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/flow"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Flow" />
+
+        <Button
+            android:id="@+id/tab"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Tabbed" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/table3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table2"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Camera"/>
+    </LinearLayout>
+</RelativeLayout>
