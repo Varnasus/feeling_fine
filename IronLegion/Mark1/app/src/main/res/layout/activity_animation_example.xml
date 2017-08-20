@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.mark1.AnimationExampleActivity">
+
+    <ImageView
+        android:id="@+id/chiefs_logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="40dp"
+        android:src="@drawable/chiefs_logo" />
+
+    <LinearLayout
+        android:id="@+id/table0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chiefs_logo"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/slide"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:text="Slide"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/fade"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:text="Fade"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/clockwise"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:text="Clockwise"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/table1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table0"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/zoom"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:text="Zoom"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/blink"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:text="Blink"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/move"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:text="Move"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>

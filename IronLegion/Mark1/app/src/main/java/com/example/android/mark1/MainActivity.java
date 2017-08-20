@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -103,6 +105,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FullscreenActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.animation).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AnimationExampleActivity.class);
                 startActivity(intent);
             }
         });
