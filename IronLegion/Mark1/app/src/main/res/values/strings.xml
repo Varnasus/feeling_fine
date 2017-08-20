@@ -103,4 +103,5 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_tabbed_action_bar">TabbedActionBarActivity</string>
+    <string name="title_activity_tabbed_spinner">TabbedSpinnerActivity</string>
 </resources>

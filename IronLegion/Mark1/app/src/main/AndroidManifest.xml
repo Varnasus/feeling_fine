@@ -42,6 +42,10 @@
         <activity
             android:name=".TabbedActionBarActivity"
             android:label="@string/title_activity_tabbed_action_bar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TabbedSpinnerActivity"
+            android:label="@string/title_activity_tabbed_spinner"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
