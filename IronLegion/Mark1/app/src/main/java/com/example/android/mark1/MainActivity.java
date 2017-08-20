@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.tab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, TabbedActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, TabbedActivity.class);
+                startActivity(intent);
             }
         });
 
