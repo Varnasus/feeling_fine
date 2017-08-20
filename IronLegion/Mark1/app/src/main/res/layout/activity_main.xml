@@ -18,7 +18,7 @@
         android:src="@drawable/chiefs_logo" />
 
     <LinearLayout
-        android:id="@+id/table1"
+        android:id="@+id/table0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/chiefslogo"
@@ -42,10 +42,10 @@
 
 
     <LinearLayout
-        android:id="@+id/table2"
+        android:id="@+id/table1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/table1"
+        android:layout_below="@id/table0"
         android:layout_centerInParent="true"
         android:orientation="horizontal">
 
@@ -62,6 +62,26 @@
             android:text="Tabbed" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/table2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table1"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tab_2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Tab Action Bar" />
+
+        <Button
+            android:id="@+id/tab_spinner"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Tab Spinner" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/table3"

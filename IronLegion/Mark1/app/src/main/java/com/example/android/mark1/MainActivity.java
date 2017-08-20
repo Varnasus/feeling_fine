@@ -49,6 +49,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.tab_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TabbedActionBarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+//        findViewById(R.id.tab_spinner).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, TabbedActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
         findViewById(R.id.camera).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
