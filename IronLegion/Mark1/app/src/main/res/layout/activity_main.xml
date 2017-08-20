@@ -71,10 +71,10 @@
         android:layout_centerInParent="true"
         android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/camera"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:text="Camera"/>
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Camera" />
     </LinearLayout>
 </RelativeLayout>
