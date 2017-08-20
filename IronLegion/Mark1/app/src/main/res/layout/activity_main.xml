@@ -72,15 +72,21 @@
 
         <Button
             android:id="@+id/tab_2"
-            android:layout_width="150dp"
+            android:layout_width="120dp"
             android:layout_height="50dp"
-            android:text="Tab Action Bar" />
+            android:text="Tab Act Bar" />
 
         <Button
             android:id="@+id/tab_spinner"
-            android:layout_width="150dp"
+            android:layout_width="120dp"
             android:layout_height="50dp"
             android:text="Tab Spinner" />
+
+        <Button
+            android:id="@+id/map"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Map" />
     </LinearLayout>
 
     <LinearLayout
@@ -98,7 +104,7 @@
             android:text="Ad Inter" />
 
         <Button
-            android:id="@+id/ad"
+            android:id="@+id/ad_banner"
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:text="Ad 2"/>
