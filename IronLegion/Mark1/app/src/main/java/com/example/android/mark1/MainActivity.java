@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.flow).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.nav_drawer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, ItemListActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, NavDrawerActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -76,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 
     //onActivityResult capturing images

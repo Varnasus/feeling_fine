@@ -165,4 +165,10 @@ public class TabbedSpinnerActivity extends AppCompatActivity {
             return rootView;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

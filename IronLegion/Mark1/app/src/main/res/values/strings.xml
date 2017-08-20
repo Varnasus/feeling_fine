@@ -104,4 +104,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_tabbed_action_bar">TabbedActionBarActivity</string>
     <string name="title_activity_tabbed_spinner">TabbedSpinnerActivity</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

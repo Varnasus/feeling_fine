@@ -159,4 +159,10 @@ public class TabbedActionBarActivity extends AppCompatActivity {
             return null;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

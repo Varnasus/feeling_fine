@@ -50,10 +50,10 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/flow"
+            android:id="@+id/nav_drawer"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:text="Flow" />
+            android:text="Nav Drawer" />
 
         <Button
             android:id="@+id/tab"
