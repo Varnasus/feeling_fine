@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.bottomnav).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, BottomNav.class);
@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
 
