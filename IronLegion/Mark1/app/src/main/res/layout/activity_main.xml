@@ -27,20 +27,31 @@
 
         <Button
             android:id="@+id/bottomnav"
-            android:layout_width="150dp"
+            android:layout_width="120dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@drawable/button_background"
+            android:layout_marginRight="5dp"
             android:text="Bottom Nav Bar"
             android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/login"
-            android:layout_width="150dp"
+            android:layout_width="120dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@drawable/button_background"
+            android:layout_marginRight="5dp"
             android:text="Login"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/fingerprint"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:text="Finger"
             android:textColor="#ffffff" />
     </LinearLayout>
 
@@ -55,18 +66,28 @@
 
         <Button
             android:id="@+id/nav_drawer"
-            android:layout_width="150dp"
+            android:layout_width="120dp"
             android:layout_height="50dp"
             android:background="@drawable/button_focus"
+            android:layout_marginRight="5dp"
             android:text="Nav Drawer"
             android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/tab"
-            android:layout_width="150dp"
+            android:layout_width="120dp"
             android:layout_height="50dp"
             android:background="@drawable/button_unfocused"
+            android:layout_marginRight="5dp"
             android:text="Tabbed"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/blank"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_unfocused"
+            android:text="Blank"
             android:textColor="#ffffff" />
     </LinearLayout>
 
@@ -83,6 +104,7 @@
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:background="@drawable/button_background"
+            android:layout_marginRight="5dp"
             android:text="Tab Act Bar"
             android:textColor="#ffffff" />
 
@@ -91,6 +113,7 @@
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:background="@drawable/button_background"
+            android:layout_marginRight="5dp"
             android:text="Tab Spinner"
             android:textColor="#ffffff" />
 
@@ -116,6 +139,7 @@
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:background="@drawable/button_background"
+            android:layout_marginRight="5dp"
             android:text="Ad Inter"
             android:textColor="#ffffff" />
 
@@ -124,6 +148,7 @@
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:background="@drawable/button_background"
+            android:layout_marginRight="5dp"
             android:text="Ad 2"
             android:textColor="#ffffff" />
 
@@ -149,6 +174,7 @@
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:background="@drawable/button_background"
+            android:layout_marginRight="5dp"
             android:text="Camera"
             android:textColor="#ffffff" />
         <Button
@@ -156,7 +182,16 @@
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:background="@drawable/button_background"
+            android:layout_marginRight="5dp"
             android:text="Animations"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/blank1"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="Blank"
             android:textColor="#ffffff" />
     </LinearLayout>
 </RelativeLayout>

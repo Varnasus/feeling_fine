@@ -116,6 +116,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        findViewById(R.id.fingerprint).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent fingerprint = new Intent(MainActivity.this, FingerprintActivity.class);
+                startActivity(fingerprint);
+            }
+        });
     }
 
     @Override
