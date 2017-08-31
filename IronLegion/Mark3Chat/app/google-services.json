@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1098906795349",
+    "firebase_url": "https://mark3-chat.firebaseio.com",
+    "project_id": "mark3-chat",
+    "storage_bucket": "mark3-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098906795349:android:a01350fbd566d55c",
+        "android_client_info": {
+          "package_name": "com.example.android.mark3chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098906795349-u4p0fglenjoeojhj98f6nr8kloooesqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEHFvRvXBiRPO2gUTCFe9oNiFa54hMg1Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
