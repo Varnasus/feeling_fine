@@ -74,4 +74,21 @@ MapsActivity extends FragmentActivity implements OnMapReadyCallback {
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         }
     }
+
+    public void onNormalMap(View view) {
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+    }
+
+    public void onSatelliteMap(View view) {
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+    }
+
+    public void onTerrainMap(View view) {
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+    }
+
+
+    public void onHybridMap(View view) {
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+    }
 }

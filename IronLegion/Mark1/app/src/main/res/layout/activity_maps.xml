@@ -41,4 +41,50 @@
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type: " />
+
+        <Button
+            android:id="@+id/bu_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/type"
+            android:onClick="onNormalMap"
+            android:text="Normal" />
+
+        <Button
+            android:id="@+id/satellite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bu_normal"
+            android:onClick="onSatelliteMap"
+            android:text="Satellite" />
+
+        <Button
+            android:id="@+id/terrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/satellite"
+            android:onClick="onTerrainMap"
+            android:text="Terrain" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/terrain"
+            android:onClick="onHybridMap"
+            android:text="Hybrid" />
+
+    </RelativeLayout>
+
 </RelativeLayout>
