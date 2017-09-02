@@ -2,6 +2,10 @@ package com.example.android.mark3chat;
 
 
 import android.app.ActionBar;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,8 +17,7 @@ import com.example.android.mark3chat.utils.TouchEffect;
  * inherit the common behaviors like implementing a common interface that can be
  * used in all child activities.
  */
-public class CustomActivity extends FragmentActivity implements OnClickListener
-{
+public class CustomActivity extends FragmentActivity implements OnClickListener {
 
     /**
      * Apply this Constant as touch listener for views to provide alpha touch
@@ -25,9 +28,9 @@ public class CustomActivity extends FragmentActivity implements OnClickListener
     /* (non-Javadoc)
      * @see android.app.Activity#onCreate(android.os.Bundle)
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    public void setContentView(int layoutResID)
-    {
+    public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
         setupActionBar();
     }
@@ -38,8 +41,9 @@ public class CustomActivity extends FragmentActivity implements OnClickListener
      * can override this method to change the behavior of ActionBar for
      * particular Activity
      */
-    protected void setupActionBar()
-    {
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    protected void setupActionBar() {
+
         final ActionBar actionBar = getActionBar();
         if (actionBar == null)
             return;
@@ -48,20 +52,20 @@ public class CustomActivity extends FragmentActivity implements OnClickListener
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setLogo(R.drawable.icon);
         actionBar.setBackgroundDrawable(getResources().getDrawable(
-                R.drawable.actionbar_bg));
+                R.drawable.actionbar_bg_white));
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
+
+        getDrawable(R.drawable.actionbar_bg_white).setColorFilter(getResources().getColor(R.color.main_color_blue), PorterDuff.Mode.MULTIPLY);
     }
 
     /**
      * Sets the touch and click listener for a view with given id.
      *
-     * @param id
-     *            the id
+     * @param id the id
      * @return the view on which listeners applied
      */
-    public View setTouchNClick(int id)
-    {
+    public View setTouchNClick(int id) {
 
         View v = setClick(id);
         if (v != null)
@@ -72,12 +76,10 @@ public class CustomActivity extends FragmentActivity implements OnClickListener
     /**
      * Sets the click listener for a view with given id.
      *
-     * @param id
-     *            the id
+     * @param id the id
      * @return the view on which listener is applied
      */
-    public View setClick(int id)
-    {
+    public View setClick(int id) {
 
         View v = findViewById(id);
         if (v != null)
@@ -89,8 +91,7 @@ public class CustomActivity extends FragmentActivity implements OnClickListener
      * @see android.view.View.OnClickListener#onClick(android.view.View)
      */
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
 
     }
 }
