@@ -3,6 +3,7 @@ package com.example.android.mark1;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 /**
  * Created by Zachary on 8/20/2017.

@@ -14,8 +14,8 @@ import android.os.CancellationSignal;
 import android.support.v4.app.ActivityCompat;
 import android.widget.Toast;
 
-//@TargetApi(Build.VERSION_CODES.M)
-//public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
+@TargetApi(Build.VERSION_CODES.M)
+public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
 //
 //    // You should use the CancellationSignal method whenever your app can no longer process user input, for example when your app goes
 //    // into the background. If you don’t use this method, then other apps will be unable to access the touch sensor, including the lockscreen!//
@@ -72,4 +72,4 @@ import android.widget.Toast;
 //        Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
 //    }
 
-//}
+}
