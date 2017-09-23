@@ -72,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
         newPassword = (EditText) findViewById(R.id.newPassword);
 
         oldEmail.setVisibility(View.GONE);
-        newEmail.setVisibility(View.GONE);
-        password.setVisibility(View.GONE);
-        newPassword.setVisibility(View.GONE);
+//        newEmail.setVisibility(View.GONE);
+//        password.setVisibility(View.GONE);
+//        newPassword.setVisibility(View.GONE);
         changeEmail.setVisibility(View.GONE);
         changePassword.setVisibility(View.GONE);
         sendEmail.setVisibility(View.GONE);
