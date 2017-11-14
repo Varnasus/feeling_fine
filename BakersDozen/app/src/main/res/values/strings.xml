@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bakers Dozen</string>
+
+    <string name="saugu_list">
+        <ol>6-8 oz. Tomato Sauce</ol>\n
+        <li>12 oz. Tomato Paste</li>\n
+        <li>1 Small Chopped Onion</li>
+    </string>
+</resources>
