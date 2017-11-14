@@ -45,7 +45,7 @@ public class ContentsAdapter extends RecyclerView.Adapter<ContentsAdapter.Custom
         holder.contentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), LittleItaly.class);
+                Intent intent = new Intent(view.getContext(), WeddingCookies.class);
                 context.startActivity(intent);
             }
         });

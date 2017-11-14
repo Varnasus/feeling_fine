@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.varnasus.bakersdozen.LittleItaly">
+    tools:context="com.varnasus.bakersdozen.WeddingCookies">
 
     <TextView
         android:id="@+id/header"
@@ -15,11 +15,11 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:textSize="20sp"
-        android:text="Little Italy"/>
+        android:text="Italian Wedding Cookies"/>
 
     <TextView
         android:id="@+id/proverb"
-        android:text="@string/quote_little_italy"
+        android:text="@string/quote_wedding_cookies"
         android:layout_below="@id/header"
         android:textSize="15sp"
         android:gravity="center"

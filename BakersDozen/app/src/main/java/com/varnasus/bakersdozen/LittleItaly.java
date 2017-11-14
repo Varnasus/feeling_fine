@@ -45,6 +45,12 @@ public class LittleItaly extends AppCompatActivity {
         Recipes stuffArtichoke = new Recipes("Italian Stuffed Artichokes", R.drawable.img_saugu);
         recipeArray.add(stuffArtichoke);
 
+        Recipes cannoli = new Recipes("Cannoli", R.drawable.img_saugu);
+        recipeArray.add(cannoli);
+
+        Recipes pastaSalad = new Recipes("Italian Pasta Salad", R.drawable.img_saugu);
+        recipeArray.add(pastaSalad);
+
         RecipesAdapter recipesAdapter = new RecipesAdapter(getApplicationContext(), recipeArray);
         recyclerView.setAdapter(recipesAdapter);
     }

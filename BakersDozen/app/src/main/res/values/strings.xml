@@ -1,9 +1,19 @@
 <resources>
-    <string name="app_name">Bakers Dozen</string>
+    <string name="app_name">La Mia Famiglia</string>
 
     <string name="saugu_list">
         <ol>6-8 oz. Tomato Sauce</ol>\n
         <li>12 oz. Tomato Paste</li>\n
         <li>1 Small Chopped Onion</li>
     </string>
+
+    <string name="quote_little_italy">\"I cook with wine:\n sometimes I even add it to the food.\"\n -W.C. Fields</string>
+    <string name="quote_wedding_cookies">\"You don\'t choose your family. They are God\'s\n gift to you, as you are to them.\"\n -Desmond Tutu</string>
+
+    <string name="dedication">This app is dedicated to my Grandma and Grandpa who taught me blood is thicker than water, my Mother and Father, who I love with all of my heart, my aunts that taught me the wrath of an Italian woman, and my uncles that taught me how and when to stay out of their way.</string>
+
+
+
+
+
 </resources>
