@@ -28,5 +28,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        focusBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Picasso.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
