@@ -7,19 +7,40 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.util.ArrayList;
 
 public class LittleItaly extends AppCompatActivity {
+
+    boolean favoriteIsClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_little_italy);
 
+        ArrayList<Recipes> recipeArray = new ArrayList<>();
+
         RecyclerView recyclerView = findViewById(R.id.recylcer_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        ArrayList<Recipes> recipeArray = new ArrayList<>();
+//        final LottieAnimationView favoriteButton = findViewById(R.id.favorite_gif);
+//        favoriteButton.setAnimation("checked_done_.json");
+//        favoriteButton.loop(false);
+//        favoriteButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (!favoriteIsClicked) {
+//                    startAnimation(favoriteButton);
+//                    favoriteIsClicked = true;
+//                }
+//                else {
+//                    favoriteButton.reverseAnimation();
+//                    favoriteIsClicked = false;
+//                }
+//            }
+//        });
 
         Recipes saugu = new Recipes("Saugu", R.drawable.img_saugu);
         recipeArray.add(saugu);
@@ -54,4 +75,8 @@ public class LittleItaly extends AppCompatActivity {
         RecipesAdapter recipesAdapter = new RecipesAdapter(getApplicationContext(), recipeArray);
         recyclerView.setAdapter(recipesAdapter);
     }
+
+//    public void startAnimation(LottieAnimationView view) {
+//        view.playAnimation();
+//    }
 }

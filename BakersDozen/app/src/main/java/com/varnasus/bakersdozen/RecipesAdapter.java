@@ -1,14 +1,18 @@
 package com.varnasus.bakersdozen;
 
 import android.content.Context;
+import android.icu.text.AlphabeticIndex;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.ArrayList;
 
@@ -37,12 +41,7 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.CustomVi
         Recipes recipeView = recipes.get(position);
         holder.imageView.setImageResource(recipeView.imageID);
         holder.textView.setText(recipeView.recipeName);
-        holder.recipesLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //TODO: VARNEY
-            }
-        });
+        
     }
 
     @Override
@@ -55,12 +54,14 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.CustomVi
         ImageView imageView;
         TextView textView;
         LinearLayout recipesLayout;
+//        private RatingBar ratingBar;
 
         public CustomViewHolder(View view) {
             super(view);
             imageView = view.findViewById(R.id.imageView);
             textView = view.findViewById(R.id.textView);
             recipesLayout = view.findViewById(R.id.recipeLayout);
+//            ratingBar = view.findViewById(R.id.ratingBar);
         }
     }
 

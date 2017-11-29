@@ -1,0 +1,61 @@
+{
+name: "almond-slices.json",
+steps: [
+{
+text: "Preheat oven to 375 degrees. ",
+img: "step-1-grind-spices.jpg"
+},
+{
+text: "Cream the butter and sugar until fluffy. ",
+img: "step-2-score-beef.jpg"
+},
+{
+text: "Add eggs and anise oil, beat well. Add dry ingrdients. ",
+img: "step-3-brown-beef.jpg"
+},
+{
+text: "Mix by hand until smooth(dough should no longer stick to your hands). ",
+img: "step-4-fry-onion.jpg"
+},
+{
+text: "Shape into roll about 12 inches long and 1 1/2 inches wide. Slightly flatten the top of the roll. "
+},
+{
+text: "Bake for 12-15 minutes or until lightly brown. Remove from oven and let the roll slightly cool. ", 
+img: "step-6-combine.jpg"
+},
+{
+text: "Adjust the over temperature to 425 degrees. Slice the roll diagonaly into about 1 inch pieces."
+},
+{
+text: "Lay the sliced pieces on a cookie sheet and put back into the over for another 5 minutes or until golden brown. ",
+img: "step-8-pull.jpg"
+}
+],
+summary: "",
+title: "Almond Slices",
+img: "chili.jpg",
+ingredients: [
+{
+text: "2.5 lbs Flour"
+},
+{
+text: "1/2 lb Butter"
+},
+{
+text: "1 1/4 cups Sugar"
+},
+{
+text: "9 Eggs"
+},
+{
+text: "4 1/2 tbsp Baking Powder"
+},
+{
+text: "1/2 oz Anise Oil"
+},
+{
+text: "1 1/4 lb finely chopped Almonds"
+}
+]
+}
