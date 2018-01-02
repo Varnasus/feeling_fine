@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 public class LittleItaly extends AppCompatActivity {
 
-//    boolean favoriteIsClicked = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,23 +18,6 @@ public class LittleItaly extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recylcer_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-//        final LottieAnimationView favoriteButton = findViewById(R.id.favorite_gif);
-//        favoriteButton.setAnimation("checked_done_.json");
-//        favoriteButton.loop(false);
-//        favoriteButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (!favoriteIsClicked) {
-//                    startAnimation(favoriteButton);
-//                    favoriteIsClicked = true;
-//                }
-//                else {
-//                    favoriteButton.reverseAnimation();
-//                    favoriteIsClicked = false;
-//                }
-//            }
-//        });
 
         Recipes saugu = new Recipes("Saugu", R.drawable.img_saugu);
         recipeArray.add(saugu);
@@ -71,8 +52,4 @@ public class LittleItaly extends AppCompatActivity {
         RecipesAdapter recipesAdapter = new RecipesAdapter(getApplicationContext(), recipeArray);
         recyclerView.setAdapter(recipesAdapter);
     }
-
-//    public void startAnimation(LottieAnimationView view) {
-//        view.playAnimation();
-//    }
 }

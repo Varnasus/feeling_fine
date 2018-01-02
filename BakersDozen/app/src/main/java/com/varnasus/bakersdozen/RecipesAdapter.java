@@ -49,14 +49,12 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.CustomVi
         ImageView imageView;
         TextView textView;
         LinearLayout recipesLayout;
-//        private RatingBar ratingBar;
 
         public CustomViewHolder(View view) {
             super(view);
             imageView = view.findViewById(R.id.imageView);
             textView = view.findViewById(R.id.textView);
             recipesLayout = view.findViewById(R.id.recipeLayout);
-//            ratingBar = view.findViewById(R.id.ratingBar);
         }
     }
 
