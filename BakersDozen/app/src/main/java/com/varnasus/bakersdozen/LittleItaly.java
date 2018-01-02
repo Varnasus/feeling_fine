@@ -4,16 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.Button;
-
-import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.ArrayList;
 
 public class LittleItaly extends AppCompatActivity {
 
-    boolean favoriteIsClicked = false;
+//    boolean favoriteIsClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

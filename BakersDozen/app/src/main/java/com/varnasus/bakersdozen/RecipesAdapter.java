@@ -1,18 +1,13 @@
 package com.varnasus.bakersdozen;
 
 import android.content.Context;
-import android.icu.text.AlphabeticIndex;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RatingBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.ArrayList;
 
@@ -22,8 +17,8 @@ import java.util.ArrayList;
 
 public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.CustomViewHolder> {
 
-    Context context;
-    ArrayList<Recipes> recipes;
+    public Context context;
+    private ArrayList<Recipes> recipes;
 
     public RecipesAdapter(Context context, ArrayList<Recipes> recipes) {
         this.context = context;
