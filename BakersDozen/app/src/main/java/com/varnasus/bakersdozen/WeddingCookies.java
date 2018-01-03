@@ -23,22 +23,22 @@ public class WeddingCookies extends AppCompatActivity {
 
         ArrayList<Recipes> recipeArray = new ArrayList<>();
 
-        Recipes almondSlices = new Recipes("Almond Slices", R.drawable.img_saugu);
+        Recipes almondSlices = new Recipes("Almond Slices", R.drawable.cookies_almod_slice);
         recipeArray.add(almondSlices);
 
-        Recipes sesameCookie = new Recipes("Sesame Cookies", R.drawable.img_saugu);
+        Recipes sesameCookie = new Recipes("Sesame Cookies", R.drawable.cookies_sesame);
         recipeArray.add(sesameCookie);
 
         Recipes dueDues = new Recipes("Due Dues", R.drawable.img_saugu);
         recipeArray.add(dueDues);
 
-        Recipes thumbprintCookies = new Recipes("Thumbprint Cookies", R.drawable.img_saugu);
+        Recipes thumbprintCookies = new Recipes("Thumbprint Cookies", R.drawable.cookies_thumprint);
         recipeArray.add(thumbprintCookies);
 
-        Recipes figCookies = new Recipes("Fig Cookies", R.drawable.img_saugu);
+        Recipes figCookies = new Recipes("Fig Cookies", R.drawable.cookies_fig);
         recipeArray.add(figCookies);
 
-        Recipes pizzelles = new Recipes("Pizzelles", R.drawable.img_saugu);
+        Recipes pizzelles = new Recipes("Pizzelles", R.drawable.cookies_pizzelle);
         recipeArray.add(pizzelles);
 
         Recipes patelCookies = new Recipes("Patel Cookies", R.drawable.img_saugu);
