@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorText"
     tools:context="com.varnasus.bakersdozen.WeddingCookies">
 
     <ScrollView
@@ -15,14 +16,13 @@
 
             <TextView
                 android:id="@+id/header"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@color/colorPrimary"
                 android:gravity="center"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
+                android:paddingTop="20dp"
                 android:text="Italian Wedding Cookies"
-                android:textSize="20sp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/proverb"
@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/header"
                 android:gravity="center"
+                android:background="@color/colorPrimary"
                 android:paddingBottom="4dp"
                 android:paddingTop="4dp"
                 android:text="@string/quote_wedding_cookies"
@@ -39,6 +40,8 @@
                 android:id="@+id/recylcer_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_below="@id/proverb"
                 android:clickable="true">
 
