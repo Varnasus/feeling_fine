@@ -8,48 +8,40 @@
 
     <ScrollView
         android:layout_width="match_parent"
-<<<<<<< Updated upstream
-        android:layout_height="match_parent"
-        >
-=======
         android:layout_height="match_parent">
->>>>>>> Stashed changes
 
-    <TextView
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@color/colorAccent"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:textSize="20sp"
-        android:text="Little Italy"/>
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorText"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Little Italy"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/proverb"
-        android:text="@string/quote_little_italy"
-        android:layout_below="@id/header"
-        android:textSize="15sp"
-        android:gravity="center"
-        android:paddingBottom="4dp"
-        android:paddingTop="4dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/proverb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="@string/quote_little_italy"
+            android:textSize="15sp" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recylcer_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/proverb"
-        android:clickable="true">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recylcer_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/proverb"
+            android:clickable="true">
 
-    </android.support.v7.widget.RecyclerView>
+        </android.support.v7.widget.RecyclerView>
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
     </ScrollView>
 
 </RelativeLayout>
