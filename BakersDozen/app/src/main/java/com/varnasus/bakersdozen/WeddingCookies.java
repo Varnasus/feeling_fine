@@ -20,25 +20,26 @@ public class WeddingCookies extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recylcer_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setNestedScrollingEnabled(false);
 
         ArrayList<Recipes> recipeArray = new ArrayList<>();
 
-        Recipes almondSlices = new Recipes("Almond Slices", R.drawable.cookies_almod_slice);
+        Recipes almondSlices = new Recipes("Almond Slices", R.drawable.img_saugu);
         recipeArray.add(almondSlices);
 
-        Recipes sesameCookie = new Recipes("Sesame Cookies", R.drawable.cookies_sesame);
+        Recipes sesameCookie = new Recipes("Sesame Cookies", R.drawable.img_saugu);
         recipeArray.add(sesameCookie);
 
         Recipes dueDues = new Recipes("Due Dues", R.drawable.img_saugu);
         recipeArray.add(dueDues);
 
-        Recipes thumbprintCookies = new Recipes("Thumbprint Cookies", R.drawable.cookies_thumprint);
+        Recipes thumbprintCookies = new Recipes("Thumbprint Cookies", R.drawable.img_saugu);
         recipeArray.add(thumbprintCookies);
 
-        Recipes figCookies = new Recipes("Fig Cookies", R.drawable.cookies_fig);
+        Recipes figCookies = new Recipes("Fig Cookies", R.drawable.img_saugu);
         recipeArray.add(figCookies);
 
-        Recipes pizzelles = new Recipes("Pizzelles", R.drawable.cookies_pizzelle);
+        Recipes pizzelles = new Recipes("Pizzelles", R.drawable.img_saugu);
         recipeArray.add(pizzelles);
 
         Recipes patelCookies = new Recipes("Patel Cookies", R.drawable.img_saugu);
