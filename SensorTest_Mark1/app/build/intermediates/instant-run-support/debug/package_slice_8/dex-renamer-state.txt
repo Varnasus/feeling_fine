@@ -1,4 +1,0 @@
-#Fri Jan 19 15:45:54 CST 2018
-base.0=C\:\\Users\\Zachary\\Repos\\feeling_fine\\SensorTest_Mark1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
-path.0=classes.dex
-renamed.0=classes.dex
