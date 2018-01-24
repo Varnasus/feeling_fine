@@ -23,9 +23,9 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Compass" />
             <item
-                android:id="@+id/nav_need_to_name"
+                android:id="@+id/nav_accelerometer"
                 android:icon="@drawable/ic_menu_send"
-                android:title="TODO" />
+                android:title="Accelerometer" />
         </menu>
     </item>
 

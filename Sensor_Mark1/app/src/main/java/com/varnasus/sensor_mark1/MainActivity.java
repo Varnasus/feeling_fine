@@ -95,7 +95,9 @@ public class MainActivity extends AppCompatActivity
 //        } else if (id == R.id.nav_manage) {
 //
 //        }
-        else if (id == R.id.nav_share) {
+        else if (id == R.id.nav_accelerometer) {
+            Intent intent = new Intent(this, AccelerometerActivity.class);
+            this.startActivity(intent);
 
         } else if (id == R.id.nav_send) {
 
