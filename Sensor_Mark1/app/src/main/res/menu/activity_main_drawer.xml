@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Sensor Examples">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="TODO" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="TODO" />
+        </menu>
+    </item>
+
+    <item android:title="Fun Examples">
+        <menu>
+            <item
+                android:id="@+id/nav_compass"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Compass" />
+            <item
+                android:id="@+id/nav_need_to_name"
+                android:icon="@drawable/ic_menu_send"
+                android:title="TODO" />
+        </menu>
+    </item>
+
+</menu>
