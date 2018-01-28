@@ -1,56 +1,65 @@
 package com.varnasus.sensor_mark1;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Class<?> mClass;
+    private static final String TAG = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        Log.v(TAG, "onCreate");
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //Floating Action bar - might use to capture screenshot of data
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
+
+        Log.v(TAG, "onBackPressed");
     }
 
     @Override
@@ -82,32 +91,34 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_compass) {
-            // Handle the camera action
+            launchActivity(CompassActivity.class);
 
-            Intent intent = new Intent(this, CompassActivity.class);
-            this.startActivity(intent);
-
-        }
-//        else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        }
-        else if (id == R.id.nav_thermometer) {
-
-        }
-        else if (id == R.id.nav_accelerometer) {
-            Intent intent = new Intent(this, AccelerometerActivity.class);
-            this.startActivity(intent);
+        } else if (id == R.id.nav_thermometer) {
+            //TODO
+        } else if (id == R.id.nav_accelerometer) {
+            launchActivity(AccelerometerActivity.class);
 
         } else if (id == R.id.nav_sensor_check) {
-            Intent intent = new Intent(this, CheckSensorsActivity.class);
-            this.startActivity(intent);
-
+            launchActivity(CheckSensorsActivity.class);
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        Log.d(TAG, "User clicked " + id);
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void launchActivity(Class<?> launchClass) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            mClass = launchClass;
+            //shouldn't need to request any camera permissions
+//            ActivityCompat.requestPermissions(this,
+//                    new String[]{Manifest.permission.CAMERA}, ZBAR_CAMERA_PERMISSION);
+        } else {
+            Intent intent = new Intent(this, launchClass);
+            startActivity(intent);
+        }
     }
 }
