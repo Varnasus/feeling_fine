@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Class<?> mClass;
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "VARNEY: MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,13 +93,15 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_compass) {
             launchActivity(CompassActivity.class);
 
-        } else if (id == R.id.nav_thermometer) {
-            //TODO
+        } else if (id == R.id.nav_battery) {
+            launchActivity(BatteryActivity.class);
+
         } else if (id == R.id.nav_accelerometer) {
             launchActivity(AccelerometerActivity.class);
 
         } else if (id == R.id.nav_sensor_check) {
             launchActivity(CheckSensorsActivity.class);
+
         }
 
         Log.d(TAG, "User clicked " + id);
@@ -110,15 +112,15 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void launchActivity(Class<?> launchClass) {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
-            mClass = launchClass;
+//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+//                != PackageManager.PERMISSION_GRANTED) {
+//            mClass = launchClass;
             //shouldn't need to request any camera permissions
 //            ActivityCompat.requestPermissions(this,
 //                    new String[]{Manifest.permission.CAMERA}, ZBAR_CAMERA_PERMISSION);
-        } else {
+//        } else {
             Intent intent = new Intent(this, launchClass);
             startActivity(intent);
-        }
+//        }
     }
 }
