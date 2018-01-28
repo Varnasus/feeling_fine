@@ -6,9 +6,9 @@
     <item android:title="Sensor Examples">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="TODO" />
+                android:id="@+id/nav_accelerometer"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Accelerometer" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
@@ -23,9 +23,13 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Compass" />
             <item
-                android:id="@+id/nav_accelerometer"
+                android:id="@+id/nav_thermometer"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Accelerometer" />
+                android:title="Thermometer" />
+            <item
+                android:id="@+id/nav_sensor_check"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Device Sensors" />
         </menu>
     </item>
 

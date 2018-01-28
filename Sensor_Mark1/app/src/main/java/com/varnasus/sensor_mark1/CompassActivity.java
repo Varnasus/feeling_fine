@@ -32,10 +32,10 @@ public class CompassActivity extends Activity {
         if (sensor != null) {
             sensorService.registerListener(mySensorEventListener, sensor,
                     SensorManager.SENSOR_DELAY_NORMAL);
-            Log.i("Compass MainActivity", "Registerered for ORIENTATION Sensor");
+            Log.i("Compass MainActivity", "Registered for ORIENTATION Sensor");
 
         } else {
-            Log.e("Compass MainActivity", "Registerered for ORIENTATION Sensor");
+            Log.e("Compass MainActivity", "Registered for ORIENTATION Sensor");
             Toast.makeText(this, "ORIENTATION Sensor not found",
                     Toast.LENGTH_LONG).show();
             finish();

@@ -32,6 +32,7 @@ public class AccelerometerActivity extends Activity implements SensorEventListen
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_accelerometer);
+
         view = findViewById(R.id.textView);
         view.setBackgroundColor(Color.GREEN);
 
@@ -57,16 +58,16 @@ public class AccelerometerActivity extends Activity implements SensorEventListen
         float y = values[1];
         float z = values[2];
 
-        float accelationSquareRoot = (x * x + y * y + z * z)
+        float accelerationSquareRoot = (x * x + y * y + z * z)
                 / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH);
         long actualTime = System.currentTimeMillis();
-        if (accelationSquareRoot >= 2) //
+        if (accelerationSquareRoot >= 2)
         {
             if (actualTime - lastUpdate < 200) {
                 return;
             }
             lastUpdate = actualTime;
-            Toast.makeText(this, "Device was shuffed", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "You shook the device!", Toast.LENGTH_SHORT)
                     .show();
             if (color) {
                 view.setBackgroundColor(Color.GREEN);
@@ -95,7 +96,6 @@ public class AccelerometerActivity extends Activity implements SensorEventListen
 
     @Override
     protected void onPause() {
-        // unregister listener
         super.onPause();
         sensorManager.unregisterListener(this);
     }

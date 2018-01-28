@@ -92,14 +92,17 @@ public class MainActivity extends AppCompatActivity
 //
 //        } else if (id == R.id.nav_slideshow) {
 //
-//        } else if (id == R.id.nav_manage) {
-//
 //        }
+        else if (id == R.id.nav_thermometer) {
+
+        }
         else if (id == R.id.nav_accelerometer) {
             Intent intent = new Intent(this, AccelerometerActivity.class);
             this.startActivity(intent);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_sensor_check) {
+            Intent intent = new Intent(this, CheckSensorsActivity.class);
+            this.startActivity(intent);
 
         }
 
