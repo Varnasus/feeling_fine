@@ -102,6 +102,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_sensor_check) {
             launchActivity(CheckSensorsActivity.class);
 
+        } else if (id == R.id.nav_wifi) {
+            launchActivity(WiFiActivity.class);
         }
 
         Log.d(TAG, "User clicked " + id);

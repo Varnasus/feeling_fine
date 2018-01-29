@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.varnasus.sensor_mark1">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +27,8 @@
         <activity android:name=".CompassActivity" />
         <activity android:name=".AccelerometerActivity" />
         <activity android:name=".CheckSensorsActivity" />
-        <activity android:name=".BatteryActivity"></activity>
+        <activity android:name=".BatteryActivity" />
+        <activity android:name=".WiFiActivity"/>
     </application>
 
 </manifest>

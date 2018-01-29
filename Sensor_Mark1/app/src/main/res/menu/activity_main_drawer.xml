@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item android:title="Sensor Examples">
+    <item android:title="Fun Examples">
         <menu>
             <item
                 android:id="@+id/nav_accelerometer"
@@ -13,11 +13,6 @@
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="TODO" />
-        </menu>
-    </item>
-
-    <item android:title="Fun Examples">
-        <menu>
             <item
                 android:id="@+id/nav_compass"
                 android:icon="@drawable/ic_menu_share"
@@ -30,6 +25,10 @@
                 android:id="@+id/nav_sensor_check"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Device Sensors" />
+            <item
+                android:id="@+id/nav_wifi"
+                android:icon="@drawable/ic_menu_send"
+                android:title="WiFi" />
         </menu>
     </item>
 
