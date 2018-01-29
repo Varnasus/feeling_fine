@@ -7,20 +7,22 @@ import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class BatteryActivity extends AppCompatActivity {
 
-    TextView batteryHealth;
-    TextView batteryStatus;
-    TextView batteryTemp;
+    private TextView batteryHealth;
+    private TextView batteryStatus;
+    private TextView batteryTemp;
+    private TextView batteryPercentage;
+    private TextView mTextViewPercentage;
 
     IntentFilter intentfilter;
-    IntentFilter tempFilter;
-    IntentFilter statusFilter;
 
+    private ProgressBar mProgressBar;
+
+    private int mProgressStatus = 0;
     int status;
     int deviceStatus;
 
@@ -34,29 +36,33 @@ public class BatteryActivity extends AppCompatActivity {
         batteryHealth = findViewById(R.id.battery_health);
         batteryStatus = findViewById(R.id.battery_status);
         batteryTemp = findViewById(R.id.battery_temp);
+        batteryPercentage = findViewById(R.id.battery_percent);
+        mTextViewPercentage = findViewById(R.id.tv_percentage);
+        mProgressBar = findViewById(R.id.pb);
 
         intentfilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         BatteryActivity.this.registerReceiver(broadcastreceiver, intentfilter);
         BatteryActivity.this.registerReceiver(statusReceiver, intentfilter);
         BatteryActivity.this.registerReceiver(tempReceiver, intentfilter);
+        BatteryActivity.this.registerReceiver(percentageReceiver, intentfilter);
     }
 
     private BroadcastReceiver statusReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
 
-            deviceStatus = intent.getIntExtra(BatteryManager.EXTRA_STATUS,-1);
+            deviceStatus = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
 
-            if(deviceStatus == BatteryManager.BATTERY_STATUS_CHARGING){
+            if (deviceStatus == BatteryManager.BATTERY_STATUS_CHARGING) {
                 batteryStatus.setText("Battery Status = Charging ");
 
-            } else if(deviceStatus == BatteryManager.BATTERY_STATUS_DISCHARGING){
+            } else if (deviceStatus == BatteryManager.BATTERY_STATUS_DISCHARGING) {
                 batteryStatus.setText("Battery Status = Not Charging ");
 
-            } else if (deviceStatus == BatteryManager.BATTERY_STATUS_FULL){
+            } else if (deviceStatus == BatteryManager.BATTERY_STATUS_FULL) {
                 batteryStatus.setText("Battery Status = Battery Full ");
 
-            } else if(deviceStatus == BatteryManager.BATTERY_STATUS_UNKNOWN){
+            } else if (deviceStatus == BatteryManager.BATTERY_STATUS_UNKNOWN) {
                 batteryStatus.setText("Battery Status = Unknown ");
 
             }
@@ -107,7 +113,25 @@ public class BatteryActivity extends AppCompatActivity {
 
             fBatteryTemp = (float) (intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 0)) / 10;
 
-            batteryTemp.setText("Battery Temperature: " + fBatteryTemp + " " + (char) 0x00B0 + "C");
+            batteryTemp.setText("Battery Temperature = " + fBatteryTemp + " " + (char) 0x00B0 + "C");
+        }
+    };
+
+    private BroadcastReceiver percentageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+            int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+
+            float percentage = level / (float) scale;
+
+            mProgressStatus = (int) ((percentage) * 100);
+
+            mTextViewPercentage.setText("" + mProgressStatus + "%");
+            batteryPercentage.setText("Percentage : " + mProgressStatus + "%");
+
+            mProgressBar.setProgress(mProgressStatus);
         }
     };
 }
