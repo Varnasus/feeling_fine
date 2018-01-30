@@ -1,19 +1,19 @@
 package com.varnasus.sensor_mark1;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity
             launchActivity(WiFiActivity.class);
         }
 
-        Log.d(TAG, "User clicked " + id);
+        Log.d(TAG, "User clicked " + item);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -114,15 +114,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void launchActivity(Class<?> launchClass) {
-//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-//                != PackageManager.PERMISSION_GRANTED) {
-//            mClass = launchClass;
-            //shouldn't need to request any camera permissions
-//            ActivityCompat.requestPermissions(this,
-//                    new String[]{Manifest.permission.CAMERA}, ZBAR_CAMERA_PERMISSION);
-//        } else {
-            Intent intent = new Intent(this, launchClass);
-            startActivity(intent);
-//        }
+        Intent intent = new Intent(this, launchClass);
+        startActivity(intent);
     }
 }

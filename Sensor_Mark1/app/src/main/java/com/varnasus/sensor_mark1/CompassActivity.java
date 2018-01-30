@@ -1,67 +1,86 @@
 package com.varnasus.sensor_mark1;
 
 import android.app.Activity;
-import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * Created by Zachary on 1/23/2018.
  */
 
-public class CompassActivity extends Activity {
+public class CompassActivity extends Activity implements SensorEventListener {
 
-    private static SensorManager sensorService;
-    private CustomCompassView compassView;
-    private Sensor sensor;
+    private ImageView compass;
 
-    /** Called when the activity is first created. */
+    private float currentDegree = 0f;
+
+    private SensorManager mSensorManager;
+
+    TextView degreeHeading;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        compassView = new CustomCompassView(this);
-        setContentView(compassView);
+        setContentView(R.layout.activity_compass);
 
-        sensorService = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        sensor = sensorService.getDefaultSensor(Sensor.TYPE_ORIENTATION);
-        if (sensor != null) {
-            sensorService.registerListener(mySensorEventListener, sensor,
-                    SensorManager.SENSOR_DELAY_NORMAL);
-            Log.i("Compass MainActivity", "Registered for ORIENTATION Sensor");
-
-        } else {
-            Log.e("Compass MainActivity", "Registered for ORIENTATION Sensor");
-            Toast.makeText(this, "ORIENTATION Sensor not found",
-                    Toast.LENGTH_LONG).show();
-            finish();
-        }
+        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        compass = findViewById(R.id.imageViewCompass);
+        degreeHeading = findViewById(R.id.degreeHeading);
     }
-
-    private SensorEventListener mySensorEventListener = new SensorEventListener() {
-
-        @Override
-        public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        }
-
-        @Override
-        public void onSensorChanged(SensorEvent event) {
-            // angle between the magnetic north direction
-            // 0=North, 90=East, 180=South, 270=West
-            float azimuth = event.values[0];
-            compassView.updateData(azimuth);
-        }
-    };
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (sensor != null) {
-            sensorService.unregisterListener(mySensorEventListener);
-        }
+    protected void onResume() {
+        super.onResume();
+
+        mSensorManager.registerListener( this, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+                SensorManager.SENSOR_DELAY_GAME);
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        mSensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+
+        // get the angle around the z-axis rotated
+        float degree = Math.round(event.values[0]);
+
+        degreeHeading.setText("Heading: " + Float.toString(degree) + " degrees");
+
+        // create a rotation animation (reverse turn degree degrees)
+        RotateAnimation ra = new RotateAnimation(
+                currentDegree,
+                -degree,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF,
+                0.5f);
+
+        // how long the animation will take place
+        ra.setDuration(210);
+
+        // set the animation after the end of the reservation status
+        ra.setFillAfter(true);
+
+        // Start the animation
+        compass.startAnimation(ra);
+        currentDegree = -degree;
+
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+    }
+
 }

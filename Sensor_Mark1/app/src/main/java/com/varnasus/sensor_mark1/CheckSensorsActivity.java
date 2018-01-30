@@ -27,7 +27,7 @@ public class CheckSensorsActivity extends Activity {
 
         for (int i = 1; i < mList.size(); i++) {
             tv1.setVisibility(View.VISIBLE);
-            tv1.append("\n" + "Sensor name: " + mList.get(i).getName() + "\n" + "Version #: " + mList.get(i).getVersion() + "\n" + "Type: " + mList.get(i).getType());
+            tv1.append("\n" + "Sensor name: " + mList.get(i).getName() + "\n" + "Version #: " + mList.get(i).getVersion() + "\n" + "Type: " + mList.get(i).getType() + "\n");
         }
     }
 }
