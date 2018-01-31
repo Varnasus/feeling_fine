@@ -1,16 +1,13 @@
 package com.varnasus.sensor_mark1;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Toast;
+import android.widget.TextView;
 
 /**
  * Created by Zachary on 1/23/2018.
@@ -20,27 +17,32 @@ public class AccelerometerActivity extends Activity implements SensorEventListen
 
     private SensorManager sensorManager;
     private boolean color = false;
-    private View view;
-    private long lastUpdate;
+//    private long lastUpdate;
 
-    /** Called when the activity is first created. */
+    TextView tvX;
+    TextView tvY;
+    TextView tvZ;
+
+    /**
+     * Called when the activity is first created.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_accelerometer);
 
-        view = findViewById(R.id.textView);
-        view.setBackgroundColor(Color.GREEN);
+        tvX = findViewById(R.id.textViewX);
+        tvY = findViewById(R.id.textViewY);
+        tvZ = findViewById(R.id.textViewZ);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensorManager.registerListener(this,
-                sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
-                SensorManager.SENSOR_DELAY_NORMAL);
-        lastUpdate = System.currentTimeMillis();
+                sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+//        lastUpdate = System.currentTimeMillis();
     }
 
     @Override
@@ -51,32 +53,36 @@ public class AccelerometerActivity extends Activity implements SensorEventListen
 
     }
 
-    private void getAccelerometer(SensorEvent event) {
+    public void getAccelerometer(SensorEvent event) {
         float[] values = event.values;
         // Movement
         float x = values[0];
         float y = values[1];
         float z = values[2];
 
-        float accelerationSquareRoot = (x * x + y * y + z * z)
-                / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH);
         long actualTime = System.currentTimeMillis();
-        if (accelerationSquareRoot >= 2)
-        {
-            if (actualTime - lastUpdate < 200) {
-                return;
-            }
-            lastUpdate = actualTime;
-            Toast.makeText(this, "You shook the device!", Toast.LENGTH_SHORT)
-                    .show();
-            if (color) {
-                view.setBackgroundColor(Color.GREEN);
 
-            } else {
-                view.setBackgroundColor(Color.RED);
-            }
-            color = !color;
-        }
+//            lastUpdate = actualTime;
+
+        x = roundAvoid(x, 3);
+        y = roundAvoid(y, 3);
+        z = roundAvoid(z, 3);
+
+        String xTV = String.valueOf(x);
+        String yTV = String.valueOf(y);
+        String zTV = String.valueOf(z);
+
+
+        tvX.setText(xTV);
+        tvY.setText(yTV);
+        tvZ.setText(zTV);
+
+        color = !color;
+    }
+
+    public static float roundAvoid(float value, int places) {
+        float scale = (float) Math.pow(10, places);
+        return (Math.round(value * scale) / scale);
     }
 
     @Override
@@ -87,8 +93,6 @@ public class AccelerometerActivity extends Activity implements SensorEventListen
     @Override
     protected void onResume() {
         super.onResume();
-        // register this class as a listener for the orientation and
-        // accelerometer sensors
         sensorManager.registerListener(this,
                 sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
                 SensorManager.SENSOR_DELAY_NORMAL);
